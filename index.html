@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+		<title>femspiration</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+<body>
+		 <div id="container">
+		   		<h1 id="text"><!--Random phrases when button is clicked--></h1>
+	   </div>
+	   <div id="clickme">
+			 		<button id="refresh">Hello pretty</button>
+		 <div id ="inspiration">
+			 		<div id="company">
+							Inspiration via
+							<a href="http://www.brit.co/" style="text-decoration:none">Brit+Co</a>,
+							<a href="https://www.swellmade.co/" style="text-decoration:none">Swell Made Co.</a>,
+							<a href="https://www.bando.com/" style="text-decoration:none">Bando</a>,
+							<a href="https://www.the-wing.com/"style="text-decoration:none">the Wing</a>,
+							and
+							<a href="http://www.bossbabe.me/" style="text-decoration:none">Boss Babe Academy</a>.
+					</div>
+		</div>
+
+<!--Begin script-->
+    <script>
+        var refreshBtn = document.getElementById('refresh'),
+        textHolder = document.getElementById('text'),
+        textArray = [
+          'friends who slay together, stay together',
+          'sassy, classy, and bad-assy',
+          'doing > dreaming',
+          'babes build empires',
+          'confidence level: selfie with no filters',
+          'take care of your mind as well as your nails',
+          'hustle beats talent when talent does not hustle',
+          'dear 2017, I am coming to slay',
+          'practice what you post',
+          'she-wolf of wall street',
+          'highly caffeinated',
+          'beauty tip, believe in yourself',
+          'ceo,000,000',
+          'girls doing whatever the fuck they want in 2017',
+          'resting witch face',
+          'boys beware',
+          'new york woman',
+          'internet herstory',
+          'fries before guys',
+          'I am very busy',
+          'no bad days',
+          'available for weekends',
+          'I did my best',
+          'strong female lead',
+          'here comes fun',
+          'not without my coffee',
+          'pink skies up ahead',
+          'good vibes only',
+          'the future is female',
+          'good vibes only',
+          'happiness looks good on you',
+          'alright, alright, alright',
+          'too glam to give a damn',
+          'hello sugar',
+          'friyay',
+          'be a nice human',
+          'creativtity takes courage',
+          'she did',
+          'wine not?',
+          'I woke up like this',
+          'real queens fix eachothers crowns',
+          'for all women-kind',
+          'femme fierce, fierce femme',
+          'fempowerment',
+          'she built quite a fempire',
+          'she who dares, wins',
+          ],
+        randomIndex = 0,
+        previousIndex = 0; // We'll use that to avoid getting the same text twice in a row
+
+        refreshBtn.onclick = updateText;
+
+        function updateText() {
+        while (randomIndex === previousIndex) {
+          randomIndex = Math.floor(Math.random() * textArray.length);
+        }
+        previousIndex = randomIndex;
+        textHolder.innerHTML = textArray[randomIndex];
+        }
+        window.onload = updateText;
+      </script>
+<!--End script-->
+
+
+</body>
+</html>
