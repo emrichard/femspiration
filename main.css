@@ -89,5 +89,5 @@ a:hover {
 
  @font-face {
      font-family: "CaslonGraphique";
-     src: url('file://github.com/emrichard/femspiration/blob/master/fonts/CaslonGraphique.otf') format('opentype');
+     src: url('../emrichard/femspiration/blob/master/fonts/CaslonGraphique.otf') format('opentype');
  }
